@@ -3,9 +3,10 @@ import 'package:navigation_flutter/detals_page.dart';
 
 class HomePage extends StatelessWidget {
   void openDetails(BuildContext context, String title) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) {
-      return DetailsPage(newTitle: title);
-    }));
+    // Navigator.push(context, MaterialPageRoute(builder: (_) {
+    //   return DetailsPage(newTitle: title);
+    // }));
+    Navigator.pushNamed(context, DetailsPage.rotatePage, arguments: {'title': title});
   }
 
   /*

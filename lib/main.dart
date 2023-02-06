@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_flutter/detals_page.dart';
 import 'package:navigation_flutter/home_sreen.dart';
 
 void main() {
@@ -17,7 +18,12 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity
       ),
-      home: HomePage(),
+      // home: HomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (ctx) => HomePage(),
+        DetailsPage.rotatePage : (ctx) => DetailsPage(),
+      },
     );
   }
 }
